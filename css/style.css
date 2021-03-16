@@ -191,17 +191,31 @@ li a:hover {
     font-weight: bold;
 }
 @media only screen and (max-width: 886px){
+    .left-content-card img{
+        width:70px;
+    }
+    .left-content {
+        flex:1;
+    }
+    .right-content {
+        flex:1;
+    }
+   
+}
+@media only screen and (max-width: 640px){
+    .left-content-card img{
+        width:100%;
+    }
     .middle-content{
         flex-direction: column;
     }
     .left-content {
+
         order : 2;
     }
     .right-content {
         order : 1;
     }
-}
-@media only screen and (max-width: 640px){
     .left-content-card {
         flex-direction: column;
     }
