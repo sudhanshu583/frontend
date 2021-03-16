@@ -3,14 +3,21 @@
     padding: 0px;
     margin: 0px;
 }
+html, body {
+    
+    height: 100%;
+   background-image: url('../images/background.jpg');
+}
 .container {
-    margin : 50px auto;
-    width  : 960px;
+    margin : 20px auto;
+    width  : 90%;
     border: 1px solid #ddd;
     box-shadow: 3px 5px #ccc;
+    padding-bottom: 10px;
+    background-color: #fff;
    
 }
-.header-container {
+.header {
     display: flex;
     border-bottom: 1px solid #eee;
     padding :8px 5px;
@@ -18,17 +25,22 @@
     
 }
 .header-title {
-    display: flex;
+    width:15%;
+    font-weight: bold;
 }
-header ul  {
+.header-menu {
+    flex : 3;
+}
+.header-menu ul  {
     padding:0px !important;
 }
-header ul li {
+.header-menu ul li {
     display: inline-block;
 }
-header ul li a {
+.header-menu ul li a {
     text-decoration: none;
     color: #7D7C7D;
+    padding:10px;
 }
 li a.active {
     color: #000000;
@@ -38,28 +50,178 @@ li a.active {
 li a:hover {
     color: #B6B6B6;
 }
-.logo {
-    width:120px;
-}
-.prob{
-    vertical-align: center;
-}
-header ul li + li::before {
+.header-menu ul li + li::before {
     content: " / ";
 }
-.cart-container {
+.middle-content{
     display: flex;
-    justify-content: space-between;
-    line-height: 31px;
-    margin-left: 5px;
-    color: gray;
+}
+.left-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+}
+.content-title{
+    font-weight: bold;
+    margin : 10px;
+    color :gray;
+    border-bottom: 1px solid#ddd;
+    padding: 5px;
+}
+.left-content-card {
+    display: flex;
+    align-items: center;  
+}
+.left-content-card-item {
+    display:flex;
+    margin:10px;
+    flex-direction: column;
+}
+.left-content-card img{
+    width:180px;
+}
+.left-content-card-item span{
+    padding-top:5px;
+    color :gray;
+    font-size: 12px;
+}
+.left-content-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left-content-form form {
+    width:300px;
+}
+.left-content-form input {
+    padding : 5px;
+    margin  : 5px;
+    width   : 100%;
+    font-size: 12px;
+
+}
+.card-active {
+    background-color: #eee;
+    background:1px solid gray;
+    padding: 10px;
+}
+.two-fields {
+    display: flex;
+}
+.two-fields input { 
+    width :138px;
+}
+.btn { 
+    width:314px !important;
+    padding: 10px !important;
+    background-color: #6AC354;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-family:cursive;
+    border-color: #6AC354;
+    border-style: solid;
     
 }
-.cart {
-    padding-left: 7px;
-    width:320px;
-    background-color: #eee;
+.product-image {
+    border: 5px solid#ddd;
+    width:50px;
 }
-.checkout {
+.product-image img {
+    width:50px;
+}
+.right-content-item {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid#ddd;
+    justify-content: space-between;
+}
+.no-border {
+    border-bottom: none!important;
+}
+
+.product-info {
+    display: flex;
+    flex:2;
+    flex-direction: column;
+    padding-left: 5px;
+    
+}
+.product-info-title {
     font-weight: bold;
 }
+.product-info-color {
+    font-style: italic;
+    font-size: 12px;
+    color:gray
+}
+.product-info-qty {
+    font-size: 12px;
+}
+.right-content-item-price {
+    color:gray;
+    font-weight: bold;
+    font-size: 14px;
+}
+.total-section-content {
+    margin-top: 50px;
+}
+.total-section {
+    display:flex;
+    justify-content: space-between;
+    padding: 6px;
+    color:gray;
+    font-size: 13px;
+}
+
+.total-section-price {
+    padding-right: 10px;
+}
+.total-section-content hr {
+    border:0.5px solid #ddd;
+    margin :0px 10px;
+}
+.total-text {
+    color:#000;
+    font-weight: bold;
+}
+@media only screen and (max-width: 886px){
+    .middle-content{
+        flex-direction: column;
+    }
+    .left-content {
+        order : 2;
+    }
+    .right-content {
+        order : 1;
+    }
+}
+@media only screen and (max-width: 640px){
+    .left-content-card {
+        flex-direction: column;
+    }
+    .header-menu {
+        display:none;
+    }
+}
+@media only screen and (max-width: 380px){ 
+    .left-content-form {
+        margin-left:30%;
+    }
+    .left-content-form input {
+        width:61%;
+    }
+    .two-fields input {
+        width:80px;
+    }
+    .btn { 
+        width:198px !important;
+    }
+}
+
+
