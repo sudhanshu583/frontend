@@ -4,7 +4,8 @@ function App() {
     <div className="App">
         <div className="popup-box">
           <div className="box">
-            <span className="close-icon" onClick="">x</span>
+            <span className="close-icon"><i class="fa fa-times-circle"></i>
+                    </span>
               <TextFieldDemo />
           </div>
         </div>
